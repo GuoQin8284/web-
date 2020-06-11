@@ -4,7 +4,7 @@ import unittest
 from Tools.HTMLTestRunner import HTMLTestRunner
 from action.CreateDir import create_dir
 from config import BASE_DIR
-from scripts.test_login import TestLogin
+
 
 # suite = unittest.TestSuite()
 # suite.addTest(TestLogin("test_login"))
