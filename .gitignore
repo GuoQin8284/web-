@@ -1,3 +1,5 @@
 screenshot
 log
 report
+__pycache__
+.idea

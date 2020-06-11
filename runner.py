@@ -11,6 +11,7 @@ from config import BASE_DIR
 
 # runner = unittest.TextTestRunner()
 # runner.run(loader)
+# 哈哈哈
 
 loader = unittest.TestLoader().discover(start_dir="./scripts", pattern="test*.py")
 file= BASE_DIR + os.sep + "report"+os.sep+"osid测试报告.html"
