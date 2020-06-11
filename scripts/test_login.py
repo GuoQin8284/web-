@@ -7,8 +7,8 @@ from parameterized import parameterized
 
 from action.analysis import analysis_data
 from config import BASE_DIR
-from driver.driver import webDriver
-from driver.get_toast import GetToast
+from Driver.driver import webDriver
+from Driver.get_toast import GetToast
 from page.page_login import ProxyLogin
 
 

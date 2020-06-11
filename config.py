@@ -1,6 +1,8 @@
 import logging.handlers
 import os
 
+from action.CreateDir import create_dir
+
 BASE_DIR = os.path.dirname(__file__)
 
 
@@ -13,7 +15,9 @@ def init_log_config():
     # 创建日志流处理器，用于将日志输出到控制台
     sh = logging.StreamHandler()
     # 创建日志处理器，按时间切割日志，并将日志输出到文件
-    fh = logging.handlers.TimedRotatingFileHandler(filename=BASE_DIR+"/log/web自动化演练.log", when="H", encoding="UTF-8", interval=1, backupCount=5)
+    filename = BASE_DIR + os.sep + "log" + os.sep + "web自动化演练.log"
+    create_dir(filename)
+    fh = logging.handlers.TimedRotatingFileHandler(filename, when="H", encoding="UTF-8", interval=1, backupCount=5)
 
     # 这是日志的格式
     fmt = "%(asctime)s-%(levelname)s-%(name)s [%(filename)s %(funcName)s-%(lineno)d]:%(message)s"

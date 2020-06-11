@@ -1,4 +1,8 @@
+import os
+
 from selenium.webdriver.common.keys import Keys
+
+from action.CreateDir import create_dir
 
 
 class BaseAction():
@@ -26,5 +30,5 @@ class BaseAction():
         self.input_text(feature, command)
 
     def screen_shot(self, filename):
+        create_dir(filename)
         self.driver.get_screenshot_as_file(filename)
-
